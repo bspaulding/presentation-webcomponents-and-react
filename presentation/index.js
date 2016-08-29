@@ -16,29 +16,19 @@ import {
 	Markdown,
 	Quote,
 	Slide,
-	Spectacle,
-	Text
+	Spectacle
 } from "spectacle";
-
-// Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";
-const images = {
-	githubLogo: require("../assets/GitHub-Mark-32px.png"),
-	reactLogo: require("../assets/logo-react.svg"),
-	webcomponentsLogo: require("../assets/logo-webcomponents.svg"),
-};
-preloader(images);
-
-// Import theme
-import createTheme from "spectacle/lib/themes/default";
+import {
+	Text
+} from "./Text";
+import templateExampleOne from "./examples/template.example";
+import { theme } from "./theme";
+import { images } from "./images";
+import { links } from "./links";
 
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
-
-const theme = createTheme({
-	primary: "#ff4081"
-});
 
 const Presentation = () => (
 	<Spectacle theme={theme}>
@@ -47,24 +37,32 @@ const Presentation = () => (
 				<Heading>WebComponents and React</Heading>
 				<Link href="https://github.com/bspaulding">
 					<Text textSize={22}>
-						<Image src={images.githubLogo} display={"inline"} width={22} height={22} style={{
-							margin: 0, marginRight: 4,
-							position: "relative",
-							top: 3
-						}}/>
 						github/bspaulding
 					</Text>
 				</Link>
 			</Slide>
 			<Slide>
 				<Heading>WebComponents</Heading>
-				<Text>Templates</Text>
-				<Text>HTML Imports</Text>
-				<Text>Custom Elements</Text>
-				<Text>Shadow DOM</Text>
+				<div style={{ float: "left", width: "50%" }}>
+					<Image src={images.specTemplates}/>
+					<Text>Templates</Text>
+				</div>
+				<div style={{ float: "left", width: "50%" }}>
+					<Image src={images.specHTMLImports}/>
+					<Text>HTML Imports</Text>
+				</div>
+				<div style={{ float: "left", width: "50%" }}>
+					<Image src={images.specCustomElementsLogo}/>
+					<Text>Custom Elements</Text>
+				</div>
+				<div style={{ float: "left", width: "50%" }}>
+					<Image src={images.specShadowDOM}/>
+					<Text>Shadow DOM</Text>
+				</div>
 			</Slide>
 			<Slide>
 				<Heading>Templates</Heading>
+				<CodePane lang="javascript" source={templateExampleOne}/>
 			</Slide>
 			<Slide>
 				<Heading>HTML Imports</Heading>
@@ -75,9 +73,20 @@ const Presentation = () => (
 			<Slide>
 				<Heading>Shadow DOM</Heading>
 			</Slide>
+			<Slide>
+				<Heading>Links</Heading>
+				<List>
+					{links.map(({ title, url }) => (
+						<ListItem>
+							<Link href={url} target="_blank">
+								{title}
+							</Link>
+						</ListItem>
+					))}
+				</List>
+			</Slide>
 		</Deck>
 	</Spectacle>
 );
 
 export default Presentation;
-
