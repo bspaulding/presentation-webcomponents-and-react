@@ -101,7 +101,7 @@ const Presentation = () => (
 				<Heading>Links</Heading>
 				<List>
 					{links.map(({ title, url }) => (
-						<ListItem>
+						<ListItem key={url}>
 							<Link href={url} target="_blank">
 								{title}
 							</Link>
