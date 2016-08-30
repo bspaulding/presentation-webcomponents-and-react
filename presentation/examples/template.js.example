@@ -1,0 +1,10 @@
+const template = $("template[name=product]");
+
+products.forEach(product => {
+  const f = template.content.cloneNode(true);
+  f.querySelector(".title")
+    .textContent = product.title;
+  f.querySelector(".description")
+    .textContent = product.description;
+  root.appendChild(f);
+});

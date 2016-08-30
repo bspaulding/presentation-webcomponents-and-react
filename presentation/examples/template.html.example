@@ -1,0 +1,9 @@
+<h1>Products</h1>
+<ul class="products">
+  <template name="product">
+    <h1 class="title">Untitled</h1>
+    <p class="description">
+      No description.
+    </p>
+  </template>
+</ul>

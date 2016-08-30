@@ -21,7 +21,7 @@ import {
 import {
 	Text
 } from "./Text";
-import templateExampleOne from "./examples/template.example";
+import CodeSlide from "spectacle-code-slide";
 import { theme } from "./theme";
 import { images } from "./images";
 import { links } from "./links";
@@ -60,10 +60,34 @@ const Presentation = () => (
 					<Text>Shadow DOM</Text>
 				</div>
 			</Slide>
-			<Slide>
-				<Heading>Templates</Heading>
-				<CodePane lang="javascript" source={templateExampleOne}/>
-			</Slide>
+			<CodeSlide
+				transition={[]}
+				lang="html"
+				code={require("./examples/template.html.example").trim()}
+				ranges={[{
+					loc: [0, 9], title: "HTML Templates",
+				}, {
+					locs: [[2, 3], [7, 8]], title: "<template> element"
+				}, {
+					loc: [3, 7], title: "template contents"
+				}]}
+			/>
+			<CodeSlide
+				transition={[]}
+				lang="js"
+				code={require("./examples/template.js.example").trim()}
+				ranges={[{
+					loc: [0, 1], title: "get template"
+				}, {
+					locs: [[2, 3], [9, 10]], title: "get some data"
+				}, {
+					loc: [3, 4], title: "clone content"
+				}, {
+					loc: [4, 8], title: "update elements"
+				}, {
+					loc: [8, 9], title: "append fragment"
+				}]}
+			/>
 			<Slide>
 				<Heading>HTML Imports</Heading>
 			</Slide>
