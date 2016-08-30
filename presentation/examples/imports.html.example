@@ -1,0 +1,8 @@
+<html>
+  <head>
+    <link rel="import"
+          href="/imports/my-component.html"/>
+  </head>
+  <body>
+  </body>
+</html>

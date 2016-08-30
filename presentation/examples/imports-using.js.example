@@ -1,0 +1,7 @@
+const link = $("link[rel=import]");
+
+const template = link.import.$("template");
+
+document.body.appendChild(
+  template.content.cloneNode(true)
+);

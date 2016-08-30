@@ -1,0 +1,28 @@
+<link rel="import"
+      href="/imports/money-maker.html"/>
+
+<link rel="stylesheet"
+      href="/styles/money-button.css"/>
+
+<template>
+  <button>Gimme Money</button>
+</template>
+
+<script
+  src="/scripts/money-button.js">
+</script>
+<script>
+  var proto =
+    Object.create(HTMLElement.prototype);
+
+  proto.createdCallback = function() {
+    var doc = document.currentScript.ownerDocument;
+    var template = doc.querySelector("template");
+    var clone = template.cloneNode(true);
+    this.appendChild(clone);
+  };
+
+  document.registerElement("money-button", {
+    prototype: proto
+  });
+</script>
