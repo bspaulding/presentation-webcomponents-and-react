@@ -139,7 +139,7 @@ const Presentation = () => (
 				lang="js"
 				code={require("./examples/imports-using.js.example").trim()}
 				ranges={[{
-					loc: [0, 6], title: "Using Imports"
+					loc: [0, 7], title: "Using Imports"
 				}, {
 					loc: [0, 1], title: "grab the link"
 				}, {
