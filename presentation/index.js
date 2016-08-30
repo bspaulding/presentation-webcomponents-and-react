@@ -21,7 +21,7 @@ import {
 import {
 	Text
 } from "./Text";
-import CodeSlide from "spectacle-code-slide";
+import CodeSlide from "./CodeSlide";
 import { theme } from "./theme";
 import { images } from "./images";
 import { links } from "./links";
