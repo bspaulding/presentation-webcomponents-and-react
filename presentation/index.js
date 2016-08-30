@@ -98,6 +98,9 @@ const Presentation = () => (
 				<Heading>Shadow DOM</Heading>
 			</Slide>
 			<Slide>
+				React is too big, use preact!
+			</Slide>
+			<Slide>
 				<Heading>Links</Heading>
 				<List>
 					{links.map(({ title, url }) => (
