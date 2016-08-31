@@ -19,7 +19,7 @@ import {
 	Spectacle,
 	Text
 } from "spectacle";
-import CodeSlide from "./CodeSlide";
+import CodeSlide from "spectacle-code-slide";
 import { theme } from "spectacle-theme-solarized-dark";
 import { images } from "./images";
 import { links } from "./links";
