@@ -16,13 +16,11 @@ import {
 	Markdown,
 	Quote,
 	Slide,
-	Spectacle
-} from "spectacle";
-import {
+	Spectacle,
 	Text
-} from "./Text";
+} from "spectacle";
 import CodeSlide from "./CodeSlide";
-import { theme } from "./theme";
+import { theme } from "spectacle-theme-solarized-dark";
 import { images } from "./images";
 import { links } from "./links";
 

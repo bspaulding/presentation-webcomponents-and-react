@@ -1,6 +1,6 @@
 import React from "react";
 import CodeSlide from "spectacle-code-slide";
-import { theme } from "./theme";
+import { theme } from "spectacle-theme-solarized-dark";
 
 class MyCodeSlide extends React.Component {
 	render() {
