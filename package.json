@@ -16,7 +16,7 @@
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "spectacle": "^1.0.0",
-    "spectacle-theme-solarized-dark": "1.0.1"
+    "spectacle-theme-solarized-dark": "1.0.2"
   },
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
