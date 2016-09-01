@@ -1,0 +1,14 @@
+<x-greeting></x-greeting>
+<!--
+  <span>Hello, World!</span>
+-->
+
+<x-greeting name="Brad"></x-greeting>
+<!--
+  <span>Hello, Brad!</span>
+-->
+
+<x-greeting>Brad</x-greeting>
+<!--
+  <span>Hello, Brad!</span>
+-->

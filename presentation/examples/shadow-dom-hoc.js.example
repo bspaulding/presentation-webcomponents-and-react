@@ -1,0 +1,23 @@
+function ShadowDOM(
+  ComponentClass, CSSString) {
+
+  return class ShadowDOMComponentClass
+    extends Component {
+
+    render() {
+      return <div ref={
+        this.setup.bind(this)
+      }/>;
+    }
+
+    setup(node) {
+      this.shadow = node.createShadowRoot();
+      this._component = render(
+        <ComponentClass {...this.props}/>,
+        this.shadow
+      );
+      this.shadow.innerHTML +=
+        `<style>${CSSString}</style>`;
+    }
+  }
+}

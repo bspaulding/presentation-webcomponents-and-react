@@ -1,0 +1,8 @@
+import ShadowDOM from "preact-shadow-dom";
+import styles from "raw!styles.css";
+
+const Greeting = ({ name = "World" }) => (
+  <span>Hello, {name}!</span>);
+
+const ShadowedComponent = ShadowDOM(
+  Greeting, styles);

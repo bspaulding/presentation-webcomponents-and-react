@@ -1,0 +1,36 @@
+function CustomElement(
+  ComponentClass, tagName) {
+
+  var elementPrototype = Object.create(
+    HTMLElement.prototype);
+
+  function renderElement() {
+    const props = [].slice
+      .call(this.attributes)
+      .reduce((attrs, attr) => {
+        attrs[attr.nodeName] = attr.nodeValue;
+        return attrs;
+      }, {});
+
+    render( // ReactDOM or preact
+      <ComponentClass {...props}/>,
+      this
+    );
+  };
+
+  elementPrototype.attachedCallback =
+    renderElement;
+  elementPrototype.attributeChangedCallback =
+    renderElement;
+
+  elementPrototype.detachedCallback =
+    function() {
+      // ReactDOM or preact
+      unmountComponentAtNode(this);
+    };
+
+  return document.registerElement(
+    tagName || ComponentClass.displayName,
+    { prototype: elementPrototype }
+  );
+}

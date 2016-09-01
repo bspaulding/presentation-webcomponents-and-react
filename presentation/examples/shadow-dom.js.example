@@ -1,0 +1,14 @@
+const node = $("#my-element");
+
+const shadowRoot = node.createShadowRoot();
+
+shadowRoot.innerHTML = `
+  <span>Hello, World!</span>
+
+  <style>
+    body {
+      font-family: "Open Sans", sans-serif;
+    }
+    span { color: green; }
+  </style>
+`;

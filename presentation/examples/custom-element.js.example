@@ -1,0 +1,21 @@
+class GreetingElement extends HTMLElement {
+  connectedCallback() {
+    // ...
+  }
+
+  attachedCallback() {
+    // ...
+  }
+
+  attributeChangedCallback(
+    name, oldValue, newValue) {
+    // ...
+  }
+
+  detachedCallback() {
+    // ...
+  }
+}
+
+document.registerElement(
+  "x-greeting", GreetingElement);
