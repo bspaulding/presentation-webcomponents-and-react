@@ -157,7 +157,7 @@ class Presentation extends React.Component {
 					<Slide>
 						<Heading fit={true}>Do Custom Elements React?</Heading>
 						<Appear>
-							<Image src={images.reactPrince} width={"100%"} height={"100%"}/>
+							<Image src={images.reactPrince.replace("/", "")} width={"100%"} height={"100%"}/>
 						</Appear>
 					</Slide>
 					<CodeSlide
@@ -236,7 +236,7 @@ class Presentation extends React.Component {
 					<Slide>
 						<Heading fit={true}>Does Shadow DOM React?</Heading>
 						<Appear>
-							<Image src={images.reactSnoop} height={"100%"} width={"100%"}/>
+							<Image src={images.reactSnoop.replace("/", "")} height={"100%"} width={"100%"}/>
 						</Appear>
 					</Slide>
 					<CodeSlide
@@ -351,7 +351,7 @@ class Presentation extends React.Component {
 					<Slide>
 						<Heading fit={true}>Do HTML Imports React?</Heading>
 						<Appear>
-							<Image src={images.reactZMorris} width={"100%"} height={"100%"}/>
+							<Image src={images.reactZMorris.replace("/", "")} width={"100%"} height={"100%"}/>
 						</Appear>
 					</Slide>
 					<Slide>
@@ -385,7 +385,7 @@ class Presentation extends React.Component {
 					</Slide>
 					<Slide>
 						<Heading>thank you!</Heading>
-						<Image src={images.thanks} height={"100%"} width={"100%"}/>
+						<Image src={images.thanks.replace("/", "")} height={"100%"} width={"100%"}/>
 					</Slide>
 				</Deck>
 			</Spectacle>
