@@ -108,8 +108,14 @@ class Presentation extends React.Component {
 					/>
 					<Slide>
 						<Heading fit={true}>Does it React?</Heading>
-						<Appear>
-							<Image src={images.noReactObama.replace("/", "")} height={"100%"}/>
+					</Slide>
+					<Slide transition={["fade"]} bgImage={images.noReactObama.replace("/", "")}>
+						<Appear style={{
+							position: "absolute",
+							top: -60,
+							right: 20
+						}}>
+						<Text>not really...</Text>
 						</Appear>
 					</Slide>
 					<Slide>
