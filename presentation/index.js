@@ -109,7 +109,7 @@ class Presentation extends React.Component {
 					<Slide>
 						<Heading fit={true}>Does it React?</Heading>
 						<Appear>
-							<Image src={images.noReactObama} height={"100%"}/>
+							<Image src={images.noReactObama.replace("/", "")} height={"100%"}/>
 						</Appear>
 					</Slide>
 					<Slide>
